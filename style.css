@@ -1,19 +1,16 @@
-body{
-    margin: 0;
-    background-color: #ffffff;
-    color: #0e0e0e;
-}
-@font-face{
+@font-face {
     font-family: "yellowRabbit";
     src: url("./fonts/Yellowrabbit.otf");
 }
-/*now apply the custome font to our h1*/
-h1{
-    font-family: "Oswald", Roboto;
+body{
+    margin: 0;
+    background-color: aqua;
 }
-/*now we will target the remaining h elements using a grouped selector*/
+h1{
+    font-family: "yellowRabbit", sans-serif;
+}
 h2,h3,h4,h5,h6{
-    font-family: "Bebas Neue", system-ui;
+    font-family: "Montserrat", sans-serif;
 }
 p,a,li{
     font-size: 1.2rem;
@@ -21,17 +18,17 @@ p,a,li{
     text-decoration: none;
 }
 header{
-    height: 150px;
-    padding: 5px 5%;
-    background-color: #f4f4f4;
+    height: 200px;
+    padding: 10px 10%;
+    background-color: aqua;
 }
 header > div{
     width: auto;
-    height: 140px;
-    padding-top: 5px;
+    height: 150px;
+    padding-top: 10px;
     float: left;
 }
-header > div > a >img{
+header > div > a > img{
     width: auto;
     height: 100%;
 }
@@ -40,20 +37,22 @@ header > nav > ul{
     list-style: none;
     padding: 0;
     margin: 0;
-    height: 140px;
-    line-height: 140px;
+    height: 150px;
+    line-height: 150px;
 }
-header > nav > menu > li{
+header> nav > menu > li{
     float: left;
     padding: 0 5px;
 }
-header > nav > menu> li > a{
-    color: #0e0e0e;
+header > nav > menu > li > a{
+    color: aqua;
 }
-
-body{
-    background-color: aqua;
+img{
+    margin-left: 0;
 }
-header{
-    background-color: aqua;
+iframe{
+    margin-right: 15;
+}
+main > section > p{
+    font-family: 'Courier New', Courier, monospace;
 }
