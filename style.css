@@ -1,58 +1,107 @@
 @font-face {
-    font-family: "yellowRabbit";
-    src: url("./fonts/Yellowrabbit.otf");
-}
-body{
-    margin: 0;
-    background-color: aqua;
+    font-family: "MyFont";
+    src: url("myfont.woff2");
+    font-weight: 400;
 }
 h1{
-    font-family: "yellowRabbit", sans-serif;
+    position: relative;
+    bottom: 30px;
+    right: 40px;
 }
-h2,h3,h4,h5,h6{
-    font-family: "Montserrat", sans-serif;
+/* movie poster text i made white and placed it in a certain place on the page*/
+.movie-poster{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 200vh;
 }
-p,a,li{
-    font-size: 1.2rem;
-    font-family: "Roboto", sans-serif;
-    text-decoration: none;
+main > div > p{
+    color: #d3d3d3;
 }
-header{
-    height: 200px;
-    padding: 10px 10%;
-    background-color: aqua;
+/* the credits I am making white and then also placing it at the bottom of the page */
+.credits{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 500vh;   
 }
-header > div{
-    width: auto;
-    height: 150px;
-    padding-top: 10px;
-    float: left;
+.credits span{
+    text-align: left;
 }
-header > div > a > img{
-    width: auto;
-    height: 100%;
-}
-header > nav > ul{
-    float: right;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    height: 150px;
-    line-height: 150px;
-}
-header> nav > menu > li{
-    float: left;
-    padding: 0 5px;
-}
-header > nav > menu > li > a{
-    color: aqua;
+.credits{
+    color: #d3d3d3;
 }
 img{
-    margin-left: 0;
+    max-width: 100%;
+    height: auto;
 }
-iframe{
-    margin-right: 15;
+/*now our media queires*
+@media screen and (min-width: 480px){
+    header{
+        flex-flow: row;
+        height: 125px;
+        padding: 0;
+    }
+    header > div{
+        flex-grow: 1;
+    }
+    .example-3{
+        grid-template-columns: 1fr 1fr;
+    }
+    .example-3 div:nth-child(3){
+        order: 4;
+    }
+    .example-4 div:nth-child(3){
+        order: 3;
+    }
 }
-main > section > p{
-    font-family: 'Courier New', Courier, monospace;
+@media screen and (min-width: 600px){
+    .example-2{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (min-width: 768px){
+    body{
+        grid-template-columns: repeat(4, min-max(0, 1fr));
+        grid-template-areas: 
+        "header header header header"
+        "hero hero hero hero"
+        "main main main sidebar"
+        "footer footer footer footer";
+    }
+    .masthead h1{
+        font-size: 5em;
+    }
+    .example-3{
+        grid-template-columns: 2fr 3fr 2fr 3fr;
+    }
+    .example-3 div{
+        padding: 0;
+    }
+    .example-3 div:nth-child(3),
+    .example-3 div:nth-child(4){
+        order: 0;
+    }
+    .example-5 div:nth-child(1),
+    .example-5 div:nth-child(2){
+        order: 0;
+    }
+    footer{
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        text-align: left;
+    }
+}
+@media screen and (min-width: 1024px){
+    .example-3{
+        padding: 2% 5%;
+    }
+}
+@media screen and (min-width: 1440px){
+    header{
+        background-color: #fff;
+    }
+    header nav menu li a{
+        color: #0e0e0e;
+    }
 }
